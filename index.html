@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Especial</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('guts-and-casca-berserk-the-anime-manga-43938156-2048-1365.jpg') center/cover no-repeat;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .yes-btn {
+            background: #4caf50;
+            color: white;
+        }
+
+        .yes-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+        }
+
+        .no-btn {
+            background: #ff9800;
+            color: white;
+        }
+
+        .no-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 152, 0, 0.6);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Giselle, ¿quieres ser mi novia?</h1>
+        <p>Desde que te conocí, mi vida ha sido más bonita. Quiero compartir contigo los mejores momentos y construir algo especial juntos.</p>
+        <div class="buttons">
+            <button class="surprise-btn">Ver sorpresa</button>
+        </div>
+    </div>
+
+    <script>
+        const yesBtn = document.querySelector('.yes-btn');
+        const noBtn = document.querySelector('.no-btn');
+        const container = document.querySelector('.container');
+
+        const surpriseBtn = document.querySelector('.surprise-btn');
+        
+        surpriseBtn.addEventListener('click', () => {
+            const accept = confirm(`Querida Giselle, para revelarte esta sorpresa especial, necesito que me digas si yo puedo cumplir estos requisitos:
+            
+❤️ Crees que pueda cuidarte para siempre?
+❤️ De tantas cosas en comun, crees que construyamos algo bonito?
+💖 Crees que pueda quererte para siempre?
+💖 Crees que pueda hacerte feliz para siempre?
+✨ Estarás dispuesta a dejarte sorprender por el amor?
+
+¿Aceptas estos términos?`);
+            
+            if (accept) {
+                alert('¡Gracias por aceptar! Prepárate para un momento mágico lleno de amor...');
+                window.location.href = 'surprise.html';
+            } else {
+                alert('Entiendo, mi amor. El corazón espera pacientemente, porque cada momento contigo es especial. Cuando estés lista, la sorpresa te estará esperando con todo el cariño.');
+            }
+        });
+    </script>
+</body>
+</html>
